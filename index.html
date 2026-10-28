@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FarKop — Warung Kopi</title>
+<meta name="description" content="FarKop, warung kopi dengan kopi hitam, nasi goreng, mie goreng, dan gorengan hangat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Figtree:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top" id="top">
+  <a class="brand" href="#top">Far<span>Kop</span></a>
+  <nav class="links"><a href="#menu">Menu</a><a href="#cerita">Cerita</a><a href="#jam">Jam buka</a><a href="#kontak">Kontak</a></nav>
+  <div class="top-r">
+    <a class="btn small" href="#menu">Pesan</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+  <nav class="mmenu" id="mmenu"><a href="#menu">Menu</a><a href="#cerita">Cerita</a><a href="#jam">Jam buka</a><a href="#kontak">Kontak</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-text">
+    <p class="status" id="status"><i></i><span>Memeriksa jam buka…</span></p>
+    <h1>Ngopi dulu, urusan belakangan.</h1>
+    <p class="lead">Kopi diseduh saat dipesan, nasi goreng diaduk di wajan besar, dan selalu ada kursi kosong buat satu orang lagi.</p>
+    <div class="cta"><a class="btn" href="#menu">Lihat menu</a><a class="btn ghost" href="#jam">Jam buka</a></div>
+  </div>
+  <div class="collage" aria-hidden="false">
+    <figure class="ph p1" style="--r:-3deg;--d:.15s"><img data-f="Nasi_goreng_indonesia.jpg" data-w="900" alt="Nasi goreng dengan telur, kerupuk, dan acar"><figcaption>nasi goreng spesial</figcaption><i class="tape"></i></figure>
+    <figure class="ph p2" style="--r:4deg;--d:.3s"><img data-f="Cappuccino_at_Sightglass_Coffee.jpg" data-w="700" alt="Secangkir cappuccino"><figcaption>cappuccino</figcaption><i class="tape"></i></figure>
+    <figure class="ph p3" style="--r:-2deg;--d:.45s"><img data-f="Pisang_goreng_fried_banana.JPG" data-w="700" alt="Pisang goreng"><figcaption>pisang goreng</figcaption><i class="tape"></i></figure>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="strip-in"><span>Kopi Hitam · Cappuccino · Nasi Goreng · Mie Goreng · Pisang Goreng · Teh Manis · Kopi Susu · </span><span>Kopi Hitam · Cappuccino · Nasi Goreng · Mie Goreng · Pisang Goreng · Teh Manis · Kopi Susu · </span></div></div>
+
+<section class="section" id="menu">
+  <div class="head">
+    <div><h2>Menu</h2><p class="sub">Harga sudah termasuk pajak. Pesanan dikirim lewat WhatsApp.</p></div>
+    <div class="tabs" id="tabs"><button class="on" data-c="all">Semua</button><button data-c="kopi">Kopi</button><button data-c="non">Non-kopi</button><button data-c="makan">Makanan</button><button data-c="camil">Camilan</button></div>
+  </div>
+  <div class="dishes" id="dishes"></div>
+  <div class="board" id="board"></div>
+</section>
+
+<section class="story" id="cerita">
+  <figure class="story-ph"><img data-f="Pisang_goreng_in_a_basket.jpg" data-w="1100" alt="Penjual gorengan di gerobak pinggir jalan"><figcaption>gorengan hangat, paling enak dimakan sambil ngobrol</figcaption></figure>
+  <div class="story-t">
+    <h2>Tempat singgah, bukan tempat buru-buru.</h2>
+    <p>FarKop dibuat untuk orang yang butuh jeda: pekerja yang lembur, mahasiswa yang ngerjain tugas, bapak-bapak yang sekadar ingin main catur.</p>
+    <p>Menunya sederhana dan jujur. Tidak banyak, tapi setiap yang keluar dari dapur kami masak seperti untuk keluarga sendiri.</p>
+    <ul class="facts">
+      <li><b>Diseduh per gelas</b><span>Tidak ada kopi yang menunggu lama di teko.</span></li>
+      <li><b>Wajan besar</b><span>Api besar, nasi goreng jadi wangi dan tidak lembek.</span></li>
+      <li><b>Harga bersahabat</b><span>Ngopi lama pun dompet tetap aman.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="jam">
+  <div class="hours">
+    <div><h2>Jam buka</h2><p class="sub" id="hnote"></p></div>
+    <table id="htable"></table>
+  </div>
+</section>
+</main>
+
+<footer class="foot" id="kontak">
+  <div class="foot-g">
+    <div><span class="brand lg">Far<span>Kop</span></span><p>Warung kopi untuk ngobrol panjang dan perut kenyang.</p></div>
+    <div><h4>Alamat</h4><p id="faddr"></p></div>
+    <div><h4>Pesan &amp; tanya</h4><a id="fwa" href="#" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+  <div class="foot-b"><span>© <span id="yr"></span> FarKop. Semua hak dilindungi.</span><span>Foto: Wikimedia Commons (CC BY-SA)</span></div>
+</footer>
+
+<button class="pill" id="pill" aria-label="Buka pesanan"><span id="pillN">0</span> pesanan <b id="pillT">Rp0</b></button>
+<div class="scrim" id="scrim"></div>
+<aside class="sheet" id="sheet" aria-label="Pesanan">
+  <div class="sheet-h"><h3>Pesanan Anda</h3><button id="sheetX">Tutup</button></div>
+  <ul id="lines"></ul>
+  <div class="sheet-f">
+    <label>Atas nama<input id="who" type="text" placeholder="Nama Anda" autocomplete="name"></label>
+    <label>Cara ambil<select id="mode"><option>Makan di tempat</option><option>Bawa pulang</option></select></label>
+    <label>Catatan<input id="note" type="text" placeholder="Contoh: kopi kurang manis"></label>
+    <div class="tot"><span>Total</span><strong id="tot">Rp0</strong></div>
+    <button class="btn wa full" id="send">Kirim lewat WhatsApp</button>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
